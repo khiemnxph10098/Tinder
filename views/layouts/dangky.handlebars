@@ -1059,7 +1059,7 @@
 <body style="background: red">
     <section class="register-photo">
         <div class="form-container">
-            <form method="post" style="text-align: center;"><i class="fas fa-fire" style="font-size: 100px;color: #ff0036;"></i>
+            <form action="/profile" method="post" enctype="multipart/form-data" style="text-align: center;"><i class="fas fa-fire" style="font-size: 100px;color: #ff0036;"></i>
                 <h2 class="text-center"><strong><em>Create an account</em></strong></h2>
                 <div class="container">
                     <div class="row" style="display: inline-flex">
@@ -1070,7 +1070,12 @@
                 <div class="mb-3"></div><input class="form-control" type="date" style="margin: 10px;width: 630px">
                 <div class="col-md-6" style="text-align: left;margin: 10px;"><input type="radio" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Man</small><input type="radio" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Women</small>
                     <h1 style="font-size: 15px;margin: 10px;">Sở Thích :</h1><input type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Ăn uống</small><input type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Du lịch</small><input type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Học</small><input type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Ngủ</small><input type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Chơi game</small>
-                </div><input class="form-control" type="file" style="float:left;margin: 10px;border: #fff;background: #fff;">
+                </div>
+
+
+                    <input class="form-control" type="file" name="avatar" style="float:left;margin: 10px;border: #fff;background: #fff;">
+
+
                 <div class="mb-3"></div>
                 <input class="form-control" type="email" name="email" placeholder="Email or Phone Number" style="margin: 10px;display: block;clear: both"><input class="form-control" type="password" name="password" placeholder="Password" style="margin: 10px;display: block;clear: both"><input class="form-control" type="password" name="password-repeat" placeholder="Password (repeat)" style="margin: 10px;display: block;clear: both">
                 <div class="mb-3"></div>
@@ -1079,12 +1084,16 @@
                 </div>
                 <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="background: #ff0036;"><strong><em>Sign Up</em></strong></button></div><a class="already" href="#">You already have an account? Login here.</a>
             </form>
+
+
+
         </div>
     </section>
     <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
     <script src="../../assets/js/Simple-Slider.js"></script>
+
 </body>
 
 </html>
