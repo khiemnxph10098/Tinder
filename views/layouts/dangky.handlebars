@@ -1059,31 +1059,40 @@
 <body style="background: red">
     <section class="register-photo">
         <div class="form-container">
-            <form action="/profile" method="post" enctype="multipart/form-data" style="text-align: center;"><i class="fas fa-fire" style="font-size: 100px;color: #ff0036;"></i>
+            <form action='/profile' method="post" enctype="multipart/form-data"  style="text-align: center;"><i class="fas fa-fire" style="font-size: 100px;color: #ff0036;"></i>
                 <h2 class="text-center"><strong><em>Create an account</em></strong></h2>
                 <div class="container">
                     <div class="row" style="display: inline-flex">
-                        <div class="col-md-6" ><input  class="form-control" type="text" placeholder="Last Name"></div>
-                        <div class="col"><input  class="form-control" type="text" placeholder="First Name" style="margin-left: 20px;"></div>
+                        <div class="col-md-6" ><input name="name" class="form-control" type="text" placeholder="Name" style="margin: 0px;width: 630px"></div>
+                        <div class="col"><input name="address" class="form-control" type="text" placeholder="Address" style="margin-top: 10px;width: 630px"></div>
                     </div>
                 </div>
-                <div class="mb-3"></div><input class="form-control" type="date" style="margin: 10px;width: 630px">
-                <div class="col-md-6" style="text-align: left;margin: 10px;"><input type="radio" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Man</small><input type="radio" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Women</small>
-                    <h1 style="font-size: 15px;margin: 10px;">Sở Thích :</h1><input type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Ăn uống</small><input type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Du lịch</small><input type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Học</small><input type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Ngủ</small><input type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Chơi game</small>
+                <div class="mb-3"></div><input name="date" class="form-control" type="date" style="margin: 10px;width: 630px">
+                <div class="col-md-6" style="text-align: left;margin: 10px;"><input name="gioitinh" value="Nam" type="radio" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Nam</small><input name="gioitinh" value="Nữ" type="radio" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Nữ</small>
+<!--                    <h1 style="font-size: 15px;margin: 10px;">Sở Thích :</h1><input name="soThich" value="Ăn uống" type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Ăn uống</small><input type="checkbox" name="soThich" value="Du Lịch" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Du lịch</small><input name="soThich" value="Nghe Nhạc" type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Nghe Nhạc</small><input type="checkbox" name="soThich" value="Ngủ" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Ngủ</small><input type="checkbox" name="soThich" value="Chơi Game" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Chơi game</small>-->
+                    <h1 style="font-size: 15px;margin: 10px;">Sở Thích :</h1>
+                    <div class="col"><input name="soThich" class="form-control" type="text" placeholder="Sở Thích" style="margin-top: 10px;width: 630px"></div>
+
                 </div>
 
 
-                    <input class="form-control" type="file" name="avatar" style="float:left;margin: 10px;border: #fff;background: #fff;">
+                    <input class="form-control" type="file" name="avatar" multiple style="float:left;margin: 10px;border: #fff;background: #fff;">
 
 
                 <div class="mb-3"></div>
-                <input class="form-control" type="email" name="email" placeholder="Email or Phone Number" style="margin: 10px;display: block;clear: both"><input class="form-control" type="password" name="password" placeholder="Password" style="margin: 10px;display: block;clear: both"><input class="form-control" type="password" name="password-repeat" placeholder="Password (repeat)" style="margin: 10px;display: block;clear: both">
+                <input class="form-control" type="number" name="phonenumber" placeholder="Phone Number" style="margin: 10px;display: block;clear: both"><input class="form-control" type="password" name="password" placeholder="Password" style="margin: 10px;display: block;clear: both"><input class="form-control" type="password" name="password-repeat" placeholder="Password (repeat)" style="margin: 10px;display: block;clear: both">
                 <div class="mb-3"></div>
-                <div class="mb-3">
-                    <div class="form-check" style="text-align: left;margin-top: 50px;"><label class="form-check-label"><input class="form-check-input" type="checkbox">I agree to the license terms.</label></div>
-                </div>
-                <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="background: #ff0036;"><strong><em>Sign Up</em></strong></button></div><a class="already" href="#">You already have an account? Login here.</a>
+
+                <div class="mb-3" style="margin: 10px;width: 630px"><button class="btn btn-primary d-block w-100" type="submit" style="background: #ff0036;"><strong><em>Sign Up</em></strong></button></div><a class="already" style="margin: 10px;width: 630px" href="listUser.handlebars" >View User</a>
+
             </form>
+
+
+
+
+
+
+
 
 
 
@@ -1094,6 +1103,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
     <script src="../../assets/js/Simple-Slider.js"></script>
 
+
+
 </body>
+
+
 
 </html>

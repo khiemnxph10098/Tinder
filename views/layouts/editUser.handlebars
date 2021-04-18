@@ -1056,13 +1056,50 @@
 </head>
 
 <body>
-    <section class="login-clean" placeholder="Họ Và Tên">
-        <form method="post">
-            <h2 class="visually-hidden">Edit User</h2>
-            <div class="illustration"><i class="fas fa-fire"></i></div><input class="form-control" type="text" placeholder="Họ Và Tên" style="margin-bottom: 10px;"><input class="form-control" type="text" placeholder="Ngày Sinh" style="margin-bottom: 10px;"><input class="form-control" type="text" placeholder="Giới Tính" style="margin-bottom: 10px;"><input class="form-control" type="text" placeholder="Sở Thích" style="margin-bottom: 10px;">
-            <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Save</button></div>
-        </form>
-    </section>
+
+<section class="register-photo">
+    <div class="form-container">
+
+
+
+            <form action='/updateUser' method="post" enctype="multipart/form-data"  style="text-align: center;"><i class="fas fa-fire" style="font-size: 100px;color: #ff0036;"></i>
+                <h2 class="text-center"><strong><em>Update User</em></strong></h2>
+                {{#each users}}
+                    <input name="id" value="{{this._id}}" type="hidden"  style="width: 300px;line-height: 1.5;">
+
+                <div class="container">
+                    <div class="row" style="display: inline-flex">
+                        <div class="col-md-6" ><input name="name" class="form-control" type="text" value="{{this.name}}" placeholder="Name" style="margin: 0px;width: 630px"></div>
+                        <div class="col"><input name="address" class="form-control" type="text" value="{{this.address}}"  placeholder="Address" style="margin-top: 10px;width: 630px"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3"></div><input name="date" value="{{this.DateOfBird}}" class="form-control" type="date" style="margin: 10px;width: 630px">
+                <div class="col-md-6" style="text-align: left;margin: 10px;"><input name="gioitinh" value="Nam" type="radio" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Nam</small><input name="gioitinh" value="Nữ" type="radio" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Nữ</small>
+                    <!--                    <h1 style="font-size: 15px;margin: 10px;">Sở Thích :</h1><input name="soThich" value="Ăn uống" type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Ăn uống</small><input type="checkbox" name="soThich" value="Du Lịch" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Du lịch</small><input name="soThich" value="Nghe Nhạc" type="checkbox" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Nghe Nhạc</small><input type="checkbox" name="soThich" value="Ngủ" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Ngủ</small><input type="checkbox" name="soThich" value="Chơi Game" style="margin-left: 10px;margin-right: 5px;"><small class="form-text">Chơi game</small>-->
+                    <h1 style="font-size: 15px;margin: 10px;">Sở Thích :</h1>
+                    <div class="col"><input name="soThich" value="{{this.soThich}}"  class="form-control" type="text" placeholder="Sở Thích" style="margin-top: 10px;width: 630px"></div>
+
+                </div>
+
+
+                <input class="form-control" type="file" name="avatar" multiple style="float:left;margin: 10px;border: #fff;background: #fff;">
+
+
+                <div class="mb-3"></div>
+                <input class="form-control" type="number" value="{{this.phone}}" name="phonenumber" placeholder="Phone Number" style="margin: 10px;display: block;clear: both;width: 630px">
+                <div class="mb-3"></div>
+                {{/each}}
+
+                <div class="mb-3" style="margin: 10px;width: 630px"><button class="btn btn-primary d-block w-100" type="submit" style="background: #ff0036;"><strong><em>Save</em></strong></button></div><a style="margin: 10px;width: 630px" class="already" href="listUser.handlebars" >View User</a>
+
+            </form>
+
+
+
+    </div>
+</section>
+
     <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
